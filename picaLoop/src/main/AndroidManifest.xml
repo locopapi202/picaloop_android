@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.picaloopand.picaloop"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended. -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/PicaLoopTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="PicaLoop.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+         <meta-data
+            android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB5RX0sJ3hjaocCLJM6YoMsB471DanTYbg"/>
+        <activity
+            android:name=".WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GoogleLoginActivity"
+            android:label="@string/title_activity_google_login" >
+        </activity>
+        <activity
+            android:name=".FacebookLoginActivity"
+            android:label="@string/title_activity_facebook_login" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".UserProfileFragment"
+            android:label="@string/title_activity_user_profile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.picaloopand.picaloop.LoopFeedActivity" />
+        </activity>
+        <activity
+            android:name=".CreateALoopActivity"
+            android:label="@string/title_activity_create_aloop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.picaloopand.picaloop.LoopLibraryActivity" />
+        </activity>
+        <activity
+            android:name=".PopulateDetailsActivity"
+            android:label="@string/title_activity_bar_details"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.picaloopand.picaloop.CreateALoopActivity" />
+        </activity>
+        <activity
+            android:name=".EmailLoginActivity"
+            android:label="@string/title_activity_email_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name=".LoopFeedActivity"
+            android:label="@string/title_activity_loop_feed" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/title_activity_user_profile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.picaloopand.picaloop.LoopFeedActivity" />
+        </activity>
+        <activity android:name=".FullImageActivity" >
+        </activity>
+        <activity
+            android:name=".LoopLibraryActivity"
+            android:label="@string/title_activity_loop_library" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.picaloopand.picaloop.LoopFeedActivity" />
+        </activity>
+        <activity
+            android:name=".LoopDetailsViewActivity"
+            android:label="@string/title_activity_loop_details_view" >
+        </activity>
+        <activity
+            android:name=".RegisterFragment"
+            android:label="@string/title_activity_email_registeration" >
+        </activity>
+        <activity
+            android:name=".LoopGridActivity"
+            android:label="@string/title_activity_loop_grid" >
+        </activity>
+        <activity
+            android:name=".LoopMapViewActivity"
+            android:label="@string/title_activity_loop_map_view" >
+        </activity>
+                <activity
+            android:name=".CreateASpotActivity"
+            android:label="@string/title_activity_create_aspot" >
+        </activity>
+                <meta-data
+    android:name="com.google.android.maps.v2.API_KEY"
+    android:value="AIzaSyB5RX0sJ3hjaocCLJM6YoMsB471DanTYbg"/>
+    </application>
+
+</manifest>

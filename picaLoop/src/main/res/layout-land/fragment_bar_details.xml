@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.picaloopand.picaloop.BarFragment" >
+    <ImageView
+        android:id="@+id/bar_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/baricon"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bar" 
+        android:contentDescription="@string/bar_image"/>
+
+    <ImageView
+        android:id="@+id/baricon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/bar_icon"
+        android:src="@drawable/ic_local_bar_black_48dp" />
+
+    <TextView
+        android:id="@+id/barTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/autoCompleteTextView1"
+        android:layout_alignRight="@+id/bar_image"
+        android:layout_marginRight="103dp"
+        android:clickable="true"
+        android:text="@string/barTextView" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar_image"
+        android:layout_below="@+id/bar_image"
+        android:layout_marginLeft="18dp"
+        android:ems="10"
+        android:hint="@string/User_Comment"
+        android:inputType="textMultiLine" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/baricon"
+        android:ems="10"
+        android:hint="@string/Location_Text" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+
+	
+    <string name="title_activity_email_register">Sign in Using Email</string>
+
+    <!-- Strings related to registeration -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_firstname">First Name</string>
+    <string name="prompt_lastname">Last Name</string>
+    <string name="prompt_username">User Name</string>
+    <string name="action_register">Register</string>
+    <string name="action_back">Back to Login</string>
+    <string name="action_load_picture">Browse Picture</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+</resources>
